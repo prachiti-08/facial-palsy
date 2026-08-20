@@ -2,13 +2,12 @@
 
 A deep learning–based computer vision system for automated assessment of **facial palsy severity** from facial-region images. The project uses a transfer-learning approach with a ResNet-based convolutional neural network to classify facial palsy into four severity categories and provides visual interpretability through Grad-CAM.
 
-> **Project Status:** Completed
+> **Project Status:** Ongoing
 > **Domain:** Healthcare AI / Medical Computer Vision
 > **Task:** Multi-class Facial Palsy Severity Classification
 > **Framework:** PyTorch
 > **Deployment:** Web-based inference application
 
----
 
 ## Overview
 
@@ -31,7 +30,6 @@ The model analyzes facial regions associated with asymmetry, including the:
 
 The objective is to develop a reproducible AI pipeline that combines **data preprocessing, patient/sample-level splitting, transfer learning, model evaluation, and explainable AI**.
 
----
 
 ## Key Features
 
@@ -76,7 +74,6 @@ Images originating from the same underlying sample/subject were grouped before s
 
 This provides a more realistic estimate of model generalization than randomly splitting individual images.
 
----
 
 # Dataset
 
@@ -109,7 +106,6 @@ The dataset contains a natural class imbalance, with the Moderate Severe categor
 
 Rather than relying solely on accuracy, model evaluation therefore considers class-sensitive metrics such as **Macro F1-score**.
 
----
 
 # Data Augmentation
 
@@ -134,7 +130,6 @@ Approximate augmentation distribution:
 
 Augmentation was applied as part of the training data preparation process while maintaining separation between training, validation, and test samples.
 
----
 
 # Dataset Split
 
@@ -151,7 +146,6 @@ The dataset was split at the sample/group level rather than treating every image
 
 This was specifically designed to reduce the possibility of **data leakage**, particularly where multiple facial-region images or augmented variants may originate from the same underlying sample.
 
----
 
 # Model Architecture
 
@@ -167,8 +161,6 @@ The classification model is based on **ResNet18 with transfer learning**.
 6. Train the classification head for the target task.
 
 Transfer learning allows the model to leverage general visual representations learned from large-scale image datasets while adapting higher-level features to the medical imaging task.
-
----
 
 # Training Configuration
 
@@ -191,8 +183,6 @@ The best model is selected using **validation Macro F1-score** rather than accur
 
 This is particularly important because the dataset contains class imbalance.
 
----
-
 # Evaluation
 
 The model is evaluated using multiple metrics rather than relying solely on accuracy.
@@ -214,7 +204,6 @@ Macro F1 calculates the F1-score independently for each class and then gives eac
 
 This makes it more informative when evaluating whether the model performs reasonably across all severity levels.
 
----
 
 # Explainability with Grad-CAM
 
@@ -233,7 +222,6 @@ This can be used to investigate whether the model is focusing on relevant facial
 
 The visualization is intended as a model interpretability mechanism and **not as a replacement for clinical assessment**.
 
----
 
 # Inference Pipeline
 
@@ -259,7 +247,6 @@ Web-Based Result
 
 The application provides an interface through which an image can be submitted for model inference.
 
----
 
 # Web Application
 
@@ -275,8 +262,6 @@ The application is designed around a healthcare-oriented interface and provides:
 * Result presentation
 
 The deployment layer separates the user interface from the underlying deep learning inference pipeline.
-
----
 
 # Project Architecture
 
@@ -310,8 +295,6 @@ facial-palsy-ai/
 
 > **Note:** The public repository may contain a reduced project structure for portfolio demonstration. Core training and inference implementation is maintained separately.
 
----
-
 # Technologies Used
 
 ### Machine Learning
@@ -344,8 +327,6 @@ facial-palsy-ai/
 * Web-based deployment environment
 * GitHub
 * Vercel / cloud deployment components
-
----
 
 # Challenges Addressed
 
@@ -387,8 +368,6 @@ Performance should be interpreted together with class-wise precision, recall, F1
 
 > **Important:** The reported performance is based on the project's prepared dataset and evaluation methodology. It should not be interpreted as clinical validation or evidence of diagnostic performance in a real-world patient population.
 
----
-
 # Clinical Disclaimer
 
 This project is an **academic and research-oriented AI prototype**.
@@ -402,8 +381,6 @@ It is not intended to:
 * Serve as a certified medical device
 
 Predictions should be treated as experimental model outputs and require appropriate clinical validation before any real-world medical use.
-
----
 
 # Future Improvements
 
@@ -421,8 +398,6 @@ Potential future development includes:
 * Clinical evaluation with healthcare professionals
 * Prospective validation
 
----
-
 # Project Significance
 
 This project demonstrates an end-to-end **Healthcare AI / Medical Computer Vision workflow**, extending beyond simple model training.
@@ -432,8 +407,6 @@ The work covers:
 **Dataset Engineering → Leakage Prevention → Data Augmentation → Transfer Learning → Severity Classification → Model Evaluation → Explainable AI → Backend Inference → Web Application → Deployment**
 
 The primary objective is to demonstrate how deep learning can be integrated into a healthcare-oriented computer vision pipeline while maintaining attention to **model evaluation, interpretability, and responsible AI considerations**.
-
----
 
 # Author
 
@@ -449,8 +422,6 @@ Interested in:
 * Deep Learning
 * Explainable AI
 * AI-assisted Clinical Systems
-
----
 
 ## License
 
