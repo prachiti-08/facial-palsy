@@ -358,8 +358,6 @@ Grad-CAM was incorporated to provide visual insight into the model's decision pr
 
 The project extends beyond model training into an end-to-end application pipeline, including preprocessing, inference, result generation, and web presentation.
 
----
-
 # Results
 
 The final trained model achieved approximately **76% test accuracy** on the prepared dataset.
