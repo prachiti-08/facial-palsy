@@ -2,11 +2,11 @@
 
 A deep learning–based computer vision system for automated assessment of **facial palsy severity** from facial-region images. The project uses a transfer-learning approach with a ResNet-based convolutional neural network to classify facial palsy into four severity categories and provides visual interpretability through Grad-CAM.
 
- **Project Status:** Ongoing
- **Domain:** Healthcare AI / Medical Computer Vision
- **Task:** Multi-class Facial Palsy Severity Classification
- **Framework:** PyTorch
- **Deployment:** Web-based inference application
+- **Project Status:** Ongoing
+- **Domain:** Healthcare AI / Medical Computer Vision
+- **Task:** Multi-class Facial Palsy Severity Classification
+- **Framework:** PyTorch
+- **Deployment:** Web-based inference application
 
 
 ## Overview
